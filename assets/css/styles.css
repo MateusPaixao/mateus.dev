@@ -388,9 +388,27 @@ span.first-color {
   border-radius: .5rem;
   overflow: hidden;
 }
-.work__img img{
-  transition: 1s;
+
+.work__img span{
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  background: rgba(10, 9, 9, 0.55);
+}
+
+.work__img span:hover + img{
+  transform: scale(1.1);
+}
+
+.work__img img{
+  cursor: pointer;
+  transition: 1s;
 }
 .work__img img:hover{
   transform: scale(1.1);
@@ -524,4 +542,69 @@ span.first-color {
   .home__img{
     right: 10%;
   }
+}
+
+#modal-work {
+  position: fixed;
+  background-color: rgba(0,0,0,.7);
+  backdrop-filter: blur(8px);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: var(--z-fixed);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+}
+
+#modal-work.show {
+  display: flex;
+}
+
+#modal-work .content-modal-work {
+  background-color: #fff;
+  max-width: 900px;
+  padding: 20px;
+  border-radius: .5rem;
+  position: relative;
+  transform: translate(0, -50px);
+  opacity: 0;
+}
+
+@keyframes modalWorkShow {
+  from {
+    transform: translate(0, -50px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+#modal-work.show .content-modal-work{
+  animation: modalWorkShow .5s ease-in-out forwards;
+}
+
+#modal-work .content-modal-work button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  color: var(--first-color);
+  border: none;
+  border: 2px solid currentColor;
+  font-size: 32px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  border-radius: 50%;
+}
+
+#modal-work .content-modal-work h2,
+#modal-work .content-modal-work p { 
+  margin-bottom: var(--mb-4);
 }

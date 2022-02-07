@@ -25,6 +25,29 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
+function openModalWork() {
+    const modalWork = document.querySelector('#modal-work');
+    modalWork.classList.add('show')
+}
+
+function closeModalWork(e, self = false) {
+    if(self && e.target.id !== 'modal-work') return;
+
+    const modalWork = document.querySelector('#modal-work');
+    modalWork.classList.remove('show')
+}
+
+const workCard = document.querySelectorAll('.work__img');
+workCard.forEach(n => n.addEventListener('click', openModalWork));
+
+
+const btnCloseModalWork = document.querySelector('#modal-work button');
+btnCloseModalWork.addEventListener('click', closeModalWork);
+
+const modalWork = document.querySelector('#modal-work');
+modalWork.addEventListener('click', (e) => closeModalWork(e, true));
+
+
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
     origin: 'top',
