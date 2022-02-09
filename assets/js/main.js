@@ -47,11 +47,6 @@ btnCloseModalWork.addEventListener('click', closeModalWork);
 const modalWork = document.querySelector('#modal-work');
 modalWork.addEventListener('click', (e) => closeModalWork(e, true));
 
-
-document
-  .getElementById("formContact")
-  .addEventListener("submit", handleSubmit);
-
 const handleSubmit = (e) => {
   e.preventDefault();
   let myForm = document.getElementById("formContact");
@@ -62,11 +57,12 @@ const handleSubmit = (e) => {
     body: new URLSearchParams(formData).toString(),
   })
     .then(() => {
-        
         document.querySelector(".contact__message").classList.add('show')
     })
     .catch((error) => alert(error));
 };
+
+document.getElementById("formContact").addEventListener("submit", handleSubmit);
 
 
 // /*===== SCROLL REVEAL ANIMATION =====*/
