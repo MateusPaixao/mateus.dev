@@ -24,7 +24,7 @@
                         <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#appWork" class="nav__link">Work</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
@@ -150,87 +150,7 @@
                                 <i class='bx bxl-gitlab skills__icon'></i>
                                 <span class="skills__name">GITLAB</span>
                             </div>
-
-                            <!-- <div class="skills__data skill__box">
-                                <i class='bx bxl-tailwind-css skills__icon'></i>
-                                <span class="skills__name">TAILWIND</span>
-                            </div>
-                            
-                            <div class="skills__data skill__box">
-                                
-                                <i class='bx bxl-php skills__icon'></i>
-                                <span class="skills__name">PHP</span>
-                            </div>
-
-                            <div class="skills__data skill__box">
-                                <i class='bx bxl-netlify skills__icon'></i>
-                                <span class="skills__name">NETLIFY</span>
-                            </div>
-
-                            <div class="skills__data skill__box">
-                                <i class='bx bxl-aws skills__icon'></i>
-                                <span class="skills__name">AWS</span>
-                            </div>
-
-                            <div class="skills__data skill__box">
-                                <i class='bx bxl-docker skills__icon'></i>
-                                <span class="skills__name">DOCKER</span>
-                            </div>
-
-                            <div class="skills__data skill__box">
-                                <i class='bx bxl-codepen skills__icon'></i>
-                                <span class="skills__name">CODEPEN</span>
-                            </div> -->
                         </div>
-
-                        <!-- <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div> -->
                     </div>
                     
                     <div>              
@@ -240,33 +160,13 @@
             </section>
 
             <!--===== WORK =====-->
-            <section class="work section" id="work">
+            <section class="work section" id="appWork">
                 <h2 class="section-title">Work</h2>
 
                 <div class="work__container bd-grid">
-                    <div class="work__img">
-                        <span>Dinner In The Sky</span>
-                        <img src="assets/img/work1.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <span>Compra Certa chat bot</span>
-                        <img src="assets/img/work2.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <span>As Crônicas dos mortos website</span>
-                        <img src="assets/img/work3.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <span>Picturen app</span>
-                        <img src="assets/img/work4.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <span>Svetlana Plantas website</span>
-                        <img src="assets/img/work5.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <span>Decorati calculator</span>
-                        <img src="assets/img/work6.jpg" alt="">
+                    <div v-for="job in jobs" class="work__img" @click="openModalWork(job)" >
+                        <span>{{ job.title }}</span>
+                        <img :src="job.image" alt="">
                     </div>
                 </div>
             </section>
@@ -290,10 +190,6 @@
         <footer class="footer">
             <p class="footer__title">Mateus</p>
             <div class="footer__social">
-                <!-- <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a> -->
-
                 <a href="https://www.linkedin.com/in/mspaixao/" target="_blank" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
                 <a href="https://wa.me/+5511964399683" target="_blank" class="footer__icon"><i class='bx bxl-whatsapp'></i></a>
                 <a href="https://github.com/MateusPaixao" target="_blank" class="footer__icon"><i class='bx bxl-github' ></i></a>
@@ -301,16 +197,11 @@
             <p>&#169; 2022 copyright all right reserved</p>
         </footer>
 
-
         <div id="modal-work">
             <div class="content-modal-work">
                 <button type="button">+</button>
-                <h2>Long title here... =D</h2>
-                <p>
-                    Some text here... other words to describe the current job, here you can describe the selected work
-                    you can use this area to describe the work you are going to show in the modal window.
-                    you can use this area to describe the work you are going to show in the modal window.
-                </p>
+                <h2>Title here... =D</h2>
+                <p>Some text here... </p>
 
                 <img src="assets/img/dinner.jpg" alt="">
             </div>
@@ -321,5 +212,11 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+
+
+        <!--===== VUE JS =====-->
+        <!-- <script src="https://unpkg.com/vue@3"></script> -->
+        <script src="https://unpkg.com/vue@3.2.30/dist/vue.global.prod.js"></script>
+        <script src="assets/js/app.js"></script>
     </body>
 </html>
