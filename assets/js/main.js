@@ -51,6 +51,10 @@ const handleSubmit = (e) => {
   e.preventDefault();
   let myForm = document.getElementById("formContact");
   let formData = new FormData(myForm);
+
+
+  console.log(myForm)
+  console.log(formData)
   fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
