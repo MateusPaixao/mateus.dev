@@ -48,6 +48,27 @@ const modalWork = document.querySelector('#modal-work');
 modalWork.addEventListener('click', (e) => closeModalWork(e, true));
 
 
+document
+  .getElementById("formContact")
+  .addEventListener("submit", handleSubmit);
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  let myForm = document.getElementById("formContact");
+  let formData = new FormData(myForm);
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => {
+        
+        document.querySelector(".contact__message").classList.add('show')
+    })
+    .catch((error) => alert(error));
+};
+
+
 // /*===== SCROLL REVEAL ANIMATION =====*/
 // const sr = ScrollReveal({
 //     origin: 'top',

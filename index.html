@@ -166,7 +166,7 @@
                 <div class="work__container bd-grid">
                     <div v-for="job in jobs" class="work__img" @click="openModalWork(job)" >
                         <span>{{ job.title }}</span>
-                        <img :src="job.image" alt="">
+                        <img :src="job.thumb" alt="">
                     </div>
                 </div>
             </section>
@@ -176,12 +176,14 @@
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                    <form id="formContact" class="contact__form">
+                        <input type="text" required name="name" placeholder="Name" class="contact__input">
+                        <input type="mail" required name="email" placeholder="Email" class="contact__input">
+                        <textarea name="" required name="message" cols="0" rows="10" class="contact__input"></textarea>
                         <input type="button" value="Enviar" class="contact__button button">
                     </form>
+
+                    <span class="contact__message">Thank you for the message 💙</span>
                 </div>
             </section>
         </main>

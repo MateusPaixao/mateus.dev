@@ -318,6 +318,7 @@ span.first-color {
 
 .skills__group {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 380px;
@@ -433,6 +434,15 @@ span.first-color {
   font-size: var(--normal-font-size);
   cursor: pointer;
   margin-left: auto;
+}
+
+.contact__message {
+  color: var(--first-color);
+  display: none;
+}
+
+.contact__message.show {
+  display: block;
 }
 
 /* ===== FOOTER =====*/

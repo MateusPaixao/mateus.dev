@@ -7,7 +7,7 @@ const app = createApp({
             origin: 'top',
             distance: '80px',
             duration: 2000,
-            reset: true
+            reset: false
         });
 
         /*SCROLL HOME*/
@@ -33,15 +33,20 @@ const app = createApp({
         /*SCROLL CONTACT*/
         sr.reveal('.contact__input',{interval: 200}); 
     },
+    async created(){
+        const response = await fetch('assets/data/portfolio.json')
+        const data = await response.json()
+        this.jobs = data.filter(job => !job.disabled)
+    },
     data() {
         return {
             jobs: [
-                { title: 'Dinner In The Sky', description: 'a nice description', image: 'assets/img/work1.jpg' },
-                { title: 'Compra Certa chat bot', description: 'a nice description', image: 'assets/img/work2.jpg' },
-                { title: 'As Crônicas dos mortos website', description: 'a nice description', image: 'assets/img/work3.jpg' },
-                { title: 'Picturen app', description: 'a nice description', image: 'assets/img/work4.jpg' },
-                { title: 'Svetlana Plantas website', description: 'a nice description', image: 'assets/img/work5.jpg' },
-                { title: 'Decorati calculator', description: 'a nice description', image: 'assets/img/work6.jpg' },
+                { title: 'Dinner In The Sky', about: 'a nice description', image: 'assets/img/work1.jpg' },
+                { title: 'Compra Certa chat bot', about: 'a nice description', image: 'assets/img/work2.jpg' },
+                { title: 'As Crônicas dos mortos website', about: 'a nice description', image: 'assets/img/work3.jpg' },
+                { title: 'Picturen app', about: 'a nice description', image: 'assets/img/work4.jpg' },
+                { title: 'Svetlana Plantas website', about: 'a nice description', image: 'assets/img/work5.jpg' },
+                { title: 'Decorati calculator', about: 'a nice description', image: 'assets/img/work6.jpg' },
             ]
         }
     }, 
@@ -49,9 +54,13 @@ const app = createApp({
         openModalWork(job) {
             const modalWork = document.querySelector('#modal-work');
             modalWork.querySelector('h2').innerText = job.title
-            modalWork.querySelector('p').innerText = job.description
+            modalWork.querySelector('p').innerText = job.about
             modalWork.querySelector('img').src = job.image
             modalWork.classList.add('show')
+        },
+
+        getJobs(){
+            
         }
     }
 })

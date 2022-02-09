@@ -1,0 +1,83 @@
+[
+    {
+        "title": "Dinner In The Sky",
+        "link": "https://www.dinnerinthesky.com.br/",
+        "about": "Created in Belgium, Dinner in the Sky is present in more than 70 countries and operates in the main cities of the world such as Dubai, Las Vegas, Paris, Brussels, Athens, London, Shanghai, Tokyo and of course, SÃO PAULO",
+        "language": "PHP",
+        "badge": "APP",
+        "image": "https://www.dinnerinthesky.com.br/assets/site/img/banner.jpg",
+        "thumb": "assets/img/jobs/thumbs/dinner.png"
+    },
+
+    {
+        "title": "Website As Crônicas dos Mortos",
+        "link": "https://www.ascronicasdosmortos.com.br/",
+        "about": "A website for saga of zumbies by Rodrigo de Oliveira",
+        "language": "PHP",
+        "badge": "CMS, SITE",
+        "image": "https://www.ascronicasdosmortos.com.br/img/bg-intro.png",
+        "thumb": "assets/img/jobs/thumbs/acm.png",
+        "disabled": true
+    },
+
+    {
+        "title": "App Picturen",
+        "link": "https://play.google.com/store/apps/details?id=com.fjordtech.picturen&hl=pt_BR",
+        "about": "Picturen is a utility for learning English, with which you can create your own dictionary of words by assimilation with images",
+        "language": "React Native, NodeJs",
+        "badge": "APP",
+        "image": "assets/img/jobs/recursos.png",
+        "thumb": "assets/img/jobs/thumbs/picturen.png",
+        "disabled": true
+    },
+
+    {
+        "title": "Calculadora Decorati",
+        "link": "https://calculadora.decorati.com.br/",
+        "about": "Do you want reform your house but have no idea about this, our calculator can help you.",
+        "language": "ReactJs, NodeJS",
+        "badge": "APP",
+        "image": "https://s3-eu-west-1.amazonaws.com/landingi-editor-uploads/Z8hBalvQ/Thumb_1_.png",
+        "thumb": "assets/img/jobs/thumbs/decorati.png"
+    },
+
+    {
+        "title": "Chat bot Compra Certa",
+        "link": "https://www.compracerta.com.br/",
+        "about": "Complete Chatbot for help you with your orders, checkout and more.",
+        "language": "ReactJs, NodeJS",
+        "badge": "APP",
+        "image": "assets/img/jobs/botCC.JPG",
+        "thumb": "assets/img/jobs/thumbs/botCC.png"
+    },
+
+    {
+        "title": "Rocket Plan Tech",
+        "link": "https://www.rocketplantech.com/",
+        "about": "Restoration work is synonymous with chaos, at RocketPlan we want to help you restore your sense of control. Our goal is to decrease the amount of stress for everyone involved; from technicians in field to people in the office, and of course, your clients. We aim to do this by streamlining data collection and automating paperwork and reporting, and by making sure that it is easy to share information with the necessary stakeholders.",
+        "language": "ReactJs, NodeJS",
+        "badge": "APP",
+        "image": "assets/img/jobs/rocketplan.jpeg",
+        "thumb": "assets/img/jobs/thumbs/rocketplan.png"
+    },
+
+    {
+        "title": "Schnabl Cleaning",
+        "link": "https://schnablcleaning.com/",
+        "about": "Full service residential and commercial cleaning team offering a range of service levels. Free consultations",
+        "language": "ReactJs, NodeJS",
+        "badge": "APP",
+        "image": "assets/img/jobs/schnabl.jpeg",
+        "thumb": "assets/img/jobs/thumbs/schnabl.png"
+    },
+
+    {
+        "title": "Streammus",
+        "link": "https://www.instagram.com/streammus/?hl=en",
+        "about": "Streammus was a hub of services to improve any thing around the music. We are a community of people who share the same passion for music and the same goal to make it better.",
+        "language": "ReactJs, NodeJS",
+        "badge": "APP",
+        "image": "assets/img/jobs/streammus.jpeg",
+        "thumb": "assets/img/jobs/thumbs/streammus.png"
+    }
+] 
